@@ -34,7 +34,7 @@ ggsave("temp_vs_time_hour.png", path = "C:\\Users\\a1249\\OneDrive\\Desktop\\R h
 
 # Problem2
 
-Creat the data frame
+Create the data frame
 ```{r}
 num = rnorm(10, mean = 0, sd = 1)
 df = tibble(
