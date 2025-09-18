@@ -3,3 +3,31 @@ title: "p8105_hw1_yd2868"
 output: github_document
 date: "2025-09-16"
 ---
+Load needed packs.
+```{r}
+library(moderndive)
+library(tidyverse)
+```
+
+# problem1
+Load dataset
+```{r}
+data("early_january_weather")
+```
+
+#### Description of the dataset
+
+This dataset is hourly meteorological data for LGA, JFK and EWR for the month of January 2013. 
+
+The variables are "origin"(Weather station,which is EWR); "year", "month", "day", "hour"(Time of recording); "temp", "dewp"(Temperature and dewpoint in F); "humid(Relative humidity)"; "wind_dir", "wind_speed", "wind_gust"(Wind direction  in degrees, speed and gust speed in mph); "precip"(Precipitation, in inches); "pressure"(Sea level pressure in millibars); "visib"(Visibility in miles); "time_hour"(Date and hour of the recording as a POSIXct date).
+
+This dataset has `r nrow(early_january_weather)` rows and `r ncol(early_january_weather)` columns. 
+
+The mean temperature is `r mean(early_january_weather$temp)`.
+
+#### Scatterplot of temp vs time_hour
+Draw and save the scatterplot
+```{r}
+ggplot(data = early_january_weather , mapping = aes(y = temp , x = time_hour , color = humid)) + geom_point()
+ggsave("temp_vs_time_hour.png", path = "C:\\Users\\a1249\\OneDrive\\Desktop\\R homework\\p8105_hw1_yd2868")
+```
