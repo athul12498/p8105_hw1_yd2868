@@ -59,7 +59,7 @@ as.numeric(pull(df,2))
 as.numeric(pull(df,3))
 as.numeric(pull(df,4))
 ```
-we can convert logical and factor variables to numeric variables, but character variables do not have a natural numerical correspondence.
+We can convert logical and factor variables to numeric variables, but character variables do not have a natural numerical correspondence.
 
 TRUE is converted to 1, while FALSE is converted to 0. This is why we can compute the mean of a logical vector.
 
