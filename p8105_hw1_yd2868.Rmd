@@ -45,7 +45,7 @@ df = tibble(
 )
 ```
 
-take the mean of each variable
+Compute the mean of each variable
 ```{r}
 mean(pull(df,1))
 mean(pull(df,2))
@@ -53,7 +53,7 @@ mean(pull(df,3))
 mean(pull(df,4))
 ```
 
-apply as.numeric to three vectors
+Apply as.numeric to three vectors
 ```{r,eval=FALSE}
 as.numeric(pull(df,2))
 as.numeric(pull(df,3))
